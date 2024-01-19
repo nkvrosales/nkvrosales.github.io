@@ -359,7 +359,7 @@ border-radius: .5rem;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 300px; /* Adjust the width as per your requirement */
+width: 300px;
 height: 200px;
 overflow: hidden;
 position: relative;
