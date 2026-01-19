@@ -54,3 +54,41 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .work__img1, .contact__input',{interval: 200}); 
+
+/*===== PROJECT MODAL LOGIC =====*/
+const modal = document.getElementById("projectModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalGithub = document.getElementById("modalGithub");
+const modalWebsite = document.getElementById("modalWebsite"); // New variable
+const closeBtn = document.querySelector(".modal__close");
+
+function openModal(imgSrc, title, githubUrl, webUrl) {
+    modal.style.display = "flex";
+    modalImg.src = imgSrc;
+    modalTitle.innerText = title;
+    modalGithub.href = githubUrl;
+
+    // Logic for the Website Button
+    if (webUrl && webUrl !== "") {
+        modalWebsite.href = webUrl;
+        modalWebsite.style.display = "inline-block";
+    } else {
+        modalWebsite.style.display = "none"; // Hide if no website exists
+    }
+
+    document.body.style.overflow = "hidden";
+}
+
+// Close logic remains the same
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}

@@ -626,3 +626,99 @@ color: #FFFFFF;
         width: 450px;
     }
 }
+/* ===== MODAL (LIGHTBOX) ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000; /* Higher than your header */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow-y: auto;
+    padding: 2rem 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.modal__content {
+    background-color: #fff;
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    animation: modalScale 0.3s ease;
+}
+
+@keyframes modalScale {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal__content img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    background: #f0f0f0;
+}
+
+.modal__info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#modalTitle {
+    margin-bottom: var(--mb-2);
+    color: var(--second-color);
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal__close:hover {
+    color: var(--first-color);
+}
+
+/* Ensure work images look clickable */
+.work__img {
+    cursor: pointer;
+}
+
+/* Container for the two buttons */
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Optional: A "Ghost" style for the second button to create visual hierarchy */
+.button--ghost {
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+    color: var(--first-color);
+}
+
+.button--ghost:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+/* Ensure buttons aren't too wide on small screens */
+@media screen and (max-width: 350px) {
+    .modal__buttons {
+        flex-direction: column;
+    }
+}
