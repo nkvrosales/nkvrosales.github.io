@@ -37,27 +37,43 @@ themeToggle.addEventListener('click', () => {
 });
 
 /*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navIcon = navToggle.querySelector('i');
 
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show')
-        })
-    }
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        
+        // Toggle icon between menu and X
+        if (navMenu.classList.contains('show')) {
+            navIcon.classList.remove('bx-menu');
+            navIcon.classList.add('bx-x');
+        } else {
+            navIcon.classList.remove('bx-x');
+            navIcon.classList.add('bx-menu');
+        }
+    });
 }
-showMenu('nav-toggle', 'nav-menu')
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLinks = document.querySelectorAll('.nav__link')
 
 function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show')
+    navIcon.classList.remove('bx-x');
+    navIcon.classList.add('bx-menu');
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLinks.forEach(n => n.addEventListener('click', linkAction))
+
+/*==================== CLOSE MENU ON OUTSIDE CLICK ====================*/
+document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        if (navMenu.classList.contains('show')) {
+            linkAction();
+        }
+    }
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
