@@ -52,6 +52,7 @@
 
             <div class="home__social">
                 <a href="https://github.com/nkvrosales" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/nkvrosales/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
             </div>
         </section>
 
@@ -235,8 +236,69 @@
 
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact Me</h2>
+            <p class="contact__section-desc">Have a project in mind or just want to say hello? Feel free to reach out. I'm always open to discussing new opportunities.</p>
+            
             <div class="contact__container bd-grid">
-                <a href="mailto:nkvrosales@gmail.com" class="button">Email Me</a>
+                <!-- Left Column: Contact Info Cards -->
+                <div class="contact__info">
+                    <div class="contact__info-card">
+                        <i class='bx bx-envelope contact__info-icon'></i>
+                        <h3 class="contact__info-title">Email Me</h3>
+                        <a href="mailto:nkvrosales@gmail.com" class="contact__info-button">nkvrosales@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact__info-card">
+                        <i class='bx bxl-github contact__info-icon'></i>
+                        <h3 class="contact__info-title">GitHub</h3>
+                        <a href="https://github.com/nkvrosales" target="_blank" class="contact__info-button">github.com/nkvrosales</a>
+                    </div>
+                    
+                    <div class="contact__info-card">
+                        <i class='bx bxl-linkedin contact__info-icon'></i>
+                        <h3 class="contact__info-title">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/nkvrosales/" target="_blank" class="contact__info-button">linkedin.com/in/nkvrosales</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form Card -->
+                <div class="contact__card">
+                    <form id="contact-form" class="contact__form">
+                        <div class="contact__form-group">
+                            <label for="contact-name" class="contact__form-label">Your Name</label>
+                            <input type="text" id="contact-name" name="name" class="contact__input" placeholder="Juan Dela Cruz" required autocomplete="name">
+                        </div>
+                        
+                        <div class="contact__form-group">
+                            <label for="contact-email" class="contact__form-label">Email Address</label>
+                            <input type="email" id="contact-email" name="email" class="contact__input" placeholder="juan@mail.com" required autocomplete="email">
+                        </div>
+                        
+                        <div class="contact__form-group">
+                            <label for="contact-subject" class="contact__form-label">Subject</label>
+                            <input type="text" id="contact-subject" name="subject" class="contact__input" placeholder="Project Inquiry" required>
+                        </div>
+                        
+                        <div class="contact__form-group">
+                            <label for="contact-message" class="contact__form-label">Message</label>
+                            <textarea id="contact-message" name="message" class="contact__input contact__textarea" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="contact__submit-btn">
+                            <i class='bx bx-send contact__submit-icon'></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Beautiful custom success toast -->
+            <div id="contact-toast" class="contact__toast">
+                <div class="contact__toast-content">
+                    <i class='bx bx-check-circle contact__toast-icon' id="contact-toast-icon"></i>
+                    <div class="contact__toast-message">
+                        <span class="contact__toast-title" id="contact-toast-title">Inquiry Sent!</span>
+                        <span class="contact__toast-desc" id="contact-toast-desc">Sending your message...</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

@@ -107,7 +107,7 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
 sr.reveal('.home__social-icon', { interval: 200 });
-sr.reveal('.skills__data, .work__img, .work__img1, .contact__input', { interval: 200 });
+sr.reveal('.skills__data, .work__img, .work__img1, .contact__info-card, .contact__form-group', { interval: 200 });
 
 /*===== PROJECT MODAL LOGIC =====*/
 const modal = document.getElementById("projectModal");
@@ -145,4 +145,105 @@ window.onclick = function (event) {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     }
+}
+
+/*===== CONTACT FORM HANDLING =====*/
+const contactForm = document.getElementById('contact-form');
+const contactToast = document.getElementById('contact-toast');
+const toastIcon = document.getElementById('contact-toast-icon');
+const toastTitle = document.getElementById('contact-toast-title');
+const toastDesc = document.getElementById('contact-toast-desc');
+
+// ⚠️ REPLACE 'YOUR_FORMSPREE_ID' WITH YOUR ACTUAL FORMSPREE FORM ID
+// Create a free form at https://formspree.io/ and copy the form ID from the URL or integration page.
+const FORMSPREE_FORM_ID = 'xvzyznyo'; 
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get values
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subjectVal = document.getElementById('contact-subject').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+
+        // Simple validation check
+        if (!name || !email || !subjectVal || !message) {
+            return;
+        }
+
+        const submitBtn = contactForm.querySelector('.contact__submit-btn');
+        const submitBtnText = submitBtn.innerHTML;
+
+        // Set submit button to loading state
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin contact__submit-icon'></i> Sending...";
+
+        // Show toast in loading state
+        if (contactToast) {
+            toastIcon.className = 'bx bx-loader-alt contact__toast-icon bx-spin';
+            toastIcon.style.color = 'var(--first-color)';
+            toastTitle.innerText = 'Sending Message...';
+            toastDesc.innerText = 'Connecting to Formspree server.';
+            contactToast.classList.add('show');
+        }
+
+        // Formspree API endpoint
+        const formspreeUrl = `https://formspree.io/f/${FORMSPREE_FORM_ID}`;
+
+        // Send submission via AJAX Fetch API
+        fetch(formspreeUrl, {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                subject: subjectVal,
+                message: message
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Success State
+                if (contactToast) {
+                    toastIcon.className = 'bx bx-check-circle contact__toast-icon';
+                    toastIcon.style.color = '#0ca678';
+                    toastTitle.innerText = 'Message Sent!';
+                    toastDesc.innerText = 'Thank you! I will get back to you soon.';
+                }
+                contactForm.reset();
+            } else {
+                // Error Response State
+                throw new Error('Formspree responded with an error status');
+            }
+        })
+        .catch(error => {
+            console.error('Formspree error:', error);
+            // Error State
+            if (contactToast) {
+                toastIcon.className = 'bx bx-error-circle contact__toast-icon';
+                toastIcon.style.color = '#fa5252';
+                toastTitle.innerText = 'Submission Failed';
+                toastDesc.innerText = 'Please verify your Formspree ID or try again.';
+            }
+        })
+        .finally(() => {
+            // Restore button state
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            submitBtn.innerHTML = submitBtnText;
+
+            // Hide toast after 4 seconds
+            setTimeout(() => {
+                if (contactToast) {
+                    contactToast.classList.remove('show');
+                }
+            }, 4000);
+        });
+    });
 }
