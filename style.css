@@ -512,18 +512,20 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 2px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 [data-theme="dark"] .contact__info-card {
-    border-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .contact__info-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 15px 35px var(--card-shadow);
-    border-color: rgba(var(--hue-color), 89%, 60%, 0.2);
+    border-color: var(--first-color);
 }
 
 .contact__info-icon {
@@ -553,7 +555,8 @@ img {
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.contact__info-button:hover {
+.contact__info-button:hover,
+.contact__info-card:hover .contact__info-button {
     color: var(--first-color);
     opacity: 1;
 }
@@ -639,12 +642,12 @@ img {
 /* Input Focus States */
 .contact__input:focus {
     border-color: var(--first-color);
-    box-shadow: 0 0 0 4px rgba(var(--hue-color), 89%, 60%, 0.15);
+    box-shadow: 0 0 0 4px hsla(var(--hue-color), 89%, 60%, 0.15);
 }
 
 [data-theme="dark"] .contact__input:focus {
     border-color: var(--first-color);
-    box-shadow: 0 0 0 4px rgba(var(--hue-color), 89%, 60%, 0.25);
+    box-shadow: 0 0 0 4px hsla(var(--hue-color), 89%, 60%, 0.25);
 }
 
 /* Submit Button */
@@ -666,7 +669,7 @@ img {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
-    box-shadow: 0 4px 12px rgba(var(--hue-color), 89%, 60%, 0.2);
+    box-shadow: 0 4px 12px hsla(var(--hue-color), 89%, 60%, 0.2);
 }
 
 .contact__submit-icon {
@@ -678,7 +681,7 @@ img {
     background-color: #ffffff;
     color: var(--first-color);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(var(--hue-color), 89%, 60%, 0.35);
+    box-shadow: 0 8px 24px hsla(var(--hue-color), 89%, 60%, 0.35);
 }
 
 .contact__submit-btn:hover .contact__submit-icon {
