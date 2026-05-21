@@ -68,7 +68,7 @@ navLinks.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== CLOSE MENU ON OUTSIDE CLICK ====================*/
 document.addEventListener('click', (e) => {
-    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+    if (navToggle && !navToggle.contains(e.target) && navMenu && !navMenu.contains(e.target)) {
         if (navMenu.classList.contains('show')) {
             linkAction();
         }
@@ -83,13 +83,16 @@ function scrollActive() {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id')
+        const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+        if (navLink) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLink.classList.add('active')
+            } else {
+                navLink.classList.remove('active')
+            }
         }
     })
 }
@@ -118,26 +121,32 @@ const modalWebsite = document.getElementById("modalWebsite"); // New variable
 const closeBtn = document.querySelector(".modal__close");
 
 function openModal(imgSrc, title, githubUrl, webUrl) {
+    if (!modal || !modalImg || !modalTitle || !modalGithub) return;
+    
     modal.style.display = "flex";
     modalImg.src = imgSrc;
     modalTitle.innerText = title;
     modalGithub.href = githubUrl;
 
     // Logic for the Website Button
-    if (webUrl && webUrl !== "") {
-        modalWebsite.href = webUrl;
-        modalWebsite.style.display = "inline-block";
-    } else {
-        modalWebsite.style.display = "none"; // Hide if no website exists
+    if (modalWebsite) {
+        if (webUrl && webUrl !== "") {
+            modalWebsite.href = webUrl;
+            modalWebsite.style.display = "inline-block";
+        } else {
+            modalWebsite.style.display = "none"; // Hide if no website exists
+        }
     }
 
     document.body.style.overflow = "hidden";
 }
 
 // Close logic remains the same
-closeBtn.onclick = function () {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
+if (closeBtn) {
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
 }
 
 window.onclick = function (event) {
@@ -247,3 +256,26 @@ if (contactForm) {
         });
     });
 }
+
+// ===== PROJECT FILTER =====
+(function () {
+    const filterBtns = document.querySelectorAll('.proj__filter-btn');
+    const cards = document.querySelectorAll('.proj__card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+})();

@@ -70,66 +70,145 @@
                     </p>
                 </div>
             </div>
+
+            <!-- About Details Grid (Summary & Experience) -->
+            <div class="about__details-grid bd-grid">
+                <!-- Summary Card -->
+                <div class="premium-card">
+                    <h3 class="premium-card__title">Summary</h3>
+                    <div class="summary-list">
+                        <div class="summary-item">
+                            <span class="summary-label">ROLE</span>
+                            <span class="summary-value">Aspiring Software Engineer</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">FOCUS</span>
+                            <span class="summary-value">Full-Stack Development, IoT Systems, API Integration</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">LOCATION</span>
+                            <span class="summary-value">Laguna, Philippines</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="timeline-wrapper">
+                    <div class="timeline-header">
+                        <div class="timeline-icon-box">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </div>
+                        <h3 class="timeline-heading">Experience</h3>
+                    </div>
+
+                    <div class="timeline-container">
+                        <div class="timeline-track"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card premium-card clickable-card" onclick="openModal('images/p5.png', 'On-the-Job Training - Biñan City Hall', 'https://github.com/nkvrosales')">
+                                <div class="timeline-card-header">
+                                    <h4 class="timeline-card-title">On-the-Job Training</h4>
+                                    <span class="timeline-date"><i class='bx bx-calendar'></i> 2026</span>
+                                </div>
+                                <span class="timeline-card-subtitle">Biñan City Hall</span>
+                                <p class="timeline-card-desc">
+                                    Gained hands-on experience in government IT operations and systems administration. Spearheaded the design and development of a custom Inventory Management System for Biñan City Hospital, as well as contributing to local systems and IT infrastructure support.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">IT OPERATIONS</span>
+                                    <span class="timeline-tag">SYSTEMS ADMINISTRATION</span>
+                                    <span class="timeline-tag">TECHNICAL SUPPORT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Languages</h2>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/html-5.png" width="30" height="30" alt="HTML">
-                            <span class="skills__name">HTML</span>
+            <div class="skills__grid bd-grid">
+                <!-- Technical Arsenal Card -->
+                <div class="premium-card">
+                    <h3 class="premium-card__title">Technical Arsenal</h3>
+                    <div class="arsenal-list">
+                        <div class="arsenal-item">
+                            <span class="arsenal-label">WEB & FRONTEND</span>
+                            <div class="skill-pills">
+                                <span class="skill-pill">HTML</span>
+                                <span class="skill-pill">CSS</span>
+                                <span class="skill-pill">JAVASCRIPT</span>
+                                <span class="skill-pill">BOOTSTRAP</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__html"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/css3.png" width="30" height="30" alt="CSS">
-                            <span class="skills__name">CSS</span>
+                        <div class="arsenal-item">
+                            <span class="arsenal-label">BACKEND & DB</span>
+                            <div class="skill-pills">
+                                <span class="skill-pill">PHP</span>
+                                <span class="skill-pill">CODEIGNITER 4</span>
+                                <span class="skill-pill">MYSQL</span>
+                                <span class="skill-pill">XAMPP</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__css"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/javascript.png" width="30" height="30" alt="JS">
-                            <span class="skills__name">JAVASCRIPT</span>
+                        <div class="arsenal-item">
+                            <span class="arsenal-label">PROGRAMMING</span>
+                            <div class="skill-pills">
+                                <span class="skill-pill">PYTHON</span>
+                                <span class="skill-pill">C#</span>
+                                <span class="skill-pill">C++</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__js"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/csharp.png" width="30" height="30" alt="C#">
-                            <span class="skills__name">C#</span>
+                        <div class="arsenal-item">
+                            <span class="arsenal-label">TOOLS & SYSTEMS</span>
+                            <div class="skill-pills">
+                                <span class="skill-pill">GIT & GITHUB</span>
+                                <span class="skill-pill">LINUX (FEDORA)</span>
+                                <span class="skill-pill">CISCO NETWORKING</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__js"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/python.png" width="30" height="30" alt="Python">
-                            <span class="skills__name">PYTHON</span>
+                        <div class="arsenal-item">
+                            <span class="arsenal-label">IOT & HARDWARE</span>
+                            <div class="skill-pills">
+                                <span class="skill-pill">ARDUINO</span>
+                                <span class="skill-pill">ESP32</span>
+                                <span class="skill-pill">IOT SYSTEMS</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__ux"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <img src="images/php.png" width="30" height="30" alt="PHP">
-                            <span class="skills__name">PHP</span>
-                        </div>
-                        <div class="skills__bar skills__ux"></div>
                     </div>
                 </div>
 
-                <div>
-                    <img src="images/work1.png" alt="" class="skills__img">
+                <!-- Education Section -->
+                <div class="timeline-wrapper">
+                    <div class="timeline-header">
+                        <div class="timeline-icon-box">
+                            <i class='bx bx-book-reader'></i>
+                        </div>
+                        <h3 class="timeline-heading">Education</h3>
+                    </div>
+
+                    <div class="timeline-container">
+                        <div class="timeline-track"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card premium-card">
+                                <div class="timeline-card-header">
+                                    <h4 class="timeline-card-title">Bachelor of Science in Information Technology</h4>
+                                    <span class="timeline-date"><i class='bx bx-calendar'></i> 2022 - 2026</span>
+                                </div>
+                                <span class="timeline-card-subtitle">Mapúa Malayan Colleges Laguna</span>
+                                <p class="timeline-card-desc">
+                                    Gained strong foundations in software engineering, object-oriented programming, data structures, network security, and database administration. Active in developing web and hardware-software integration projects.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">SOFTWARE ENGINEERING</span>
+                                    <span class="timeline-tag">WEB APPLICATIONS</span>
+                                    <span class="timeline-tag">NETWORKING</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,99 +216,233 @@
         <section class="project section" id="project">
             <h2 class="section-title">Projects</h2>
 
-            <div class="work__container bd-grid">
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p1.png', 'Number Matching Game', 'https://github.com/nkvrosales/Number-Matching-Game')">
-                        <img src="images/p1.png" alt="Number Matching Game">
-                        <div class="work__text">
-                            <h3>Number Matching Game</h3>
+            <!-- Filter Tabs -->
+            <div class="proj__filters bd-grid">
+                <button class="proj__filter-btn active" data-filter="all">All</button>
+                <button class="proj__filter-btn" data-filter="web">Web</button>
+                <button class="proj__filter-btn" data-filter="mobile">Mobile</button>
+                <button class="proj__filter-btn" data-filter="game">Games</button>
+                <button class="proj__filter-btn" data-filter="iot">IoT / Systems</button>
+            </div>
+
+            <div class="proj__grid bd-grid">
+
+                <div class="proj__card" data-category="web" onclick="openModal('images/p5.png', 'Biñan City Hospital Inventory Management System', 'https://github.com/nkvrosales')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p5.png" alt="Biñan City Hospital Inventory Management System">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Biñan Hospital Inventory</h3>
+                        <p class="proj__desc">An enterprise-grade inventory management system designed for Biñan City Hospital to manage stocks, pharmaceuticals, and optimize medical resources.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">PHP</span>
+                            <span class="proj__tag">CodeIgniter 4</span>
+                            <span class="proj__tag">MySQL</span>
+                            <span class="proj__tag">Bootstrap</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p2.png', 'Tic-Tac-Toe', 'https://github.com/nkvrosales/Tic-Tac-Toe')">
-                        <img src="images/p2.png" alt="Tic-Tac-Toe">
-                        <div class="work__text">
-                            <h3>Tic-Tac-Toe</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p3.png', 'Calisthenics App', 'https://github.com/nkvrosales/Calisthenics-Mobile-Application')">
-                        <img src="images/p3.png" alt="Calisthenics Mobile Application">
-                        <div class="work__text">
-                            <h3>Calisthenics Mobile Application</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p4.PNG', 'Smoke Detection System', 'https://github.com/nkvrosales/Smoke-Detection-System')">
-                        <img src="images/p4.PNG" alt="Smoke Detection System">
-                        <div class="work__text">
-                            <h3>Smoke Detection System</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p5.png', 'Mediqueue', 'https://github.com/nkvrosales/Mediqueue','http://mediqueue.page.gd/')">
+                <div class="proj__card" data-category="web" onclick="openModal('images/p5.png', 'Mediqueue', 'https://github.com/nkvrosales/Mediqueue', 'http://mediqueue.page.gd/')">
+                    <div class="proj__img-wrap">
                         <img src="images/p5.png" alt="Mediqueue">
-                        <div class="work__text">
-                            <h3>Mediqueue</h3>
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Mediqueue</h3>
+                        <p class="proj__desc">Hospital ticketing and queue management system with role-based access, built with CodeIgniter 4 and Bootstrap.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">PHP</span>
+                            <span class="proj__tag">CodeIgniter 4</span>
+                            <span class="proj__tag">MySQL</span>
+                            <span class="proj__tag">Bootstrap</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Mediqueue" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                            <a href="http://mediqueue.page.gd/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p6.png', 'Larako', 'https://github.com/nkvrosales/larako', 'https://larako.netlify.app/')">
-                        <img src="images/p6.png" alt="Larako">
-                        <div class="work__text">
-                            <h3>Larako</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p7.png', 'Snake', 'https://github.com/nkvrosales/snakegame', 'https://snakegameforlara.netlify.app/')">
-                        <img src="images/p7.png" alt="Snake">
-                        <div class="work__text">
-                            <h3>Snake</h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p8.png', 'Notes', 'https://github.com/nkvrosales/Notes', 'https://noteslang.netlify.app/')">
-                        <img src="images/p8.png" alt="Notes">
-                        <div class="work__text">
-                            <h3>Notes</h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="work__item">
-                    <div class="work__img"
-                        onclick="openModal('images/p9.png', 'liwanag.ph', 'https://github.com/nkvrosales/Liwanagph', 'http://liwanagph.page.gd/')">
+                <div class="proj__card" data-category="web" onclick="openModal('images/p9.png', 'liwanag.ph', 'https://github.com/nkvrosales/Liwanagph', 'http://liwanagph.page.gd/')">
+                    <div class="proj__img-wrap">
                         <img src="images/p9.png" alt="liwanag.ph">
-                        <div class="work__text">
-                            <h3>liwanag.ph</h3>
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">liwanag.ph</h3>
+                        <p class="proj__desc">Electric billing management system (ElectroBill) with tiered billing logic, audit logging, and a dark modern UI.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">PHP</span>
+                            <span class="proj__tag">JavaScript</span>
+                            <span class="proj__tag">Bootstrap</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Liwanagph" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                            <a href="http://liwanagph.page.gd/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
                         </div>
                     </div>
                 </div>
 
+                <div class="proj__card" data-category="web" onclick="openModal('images/p6.png', 'Larako', 'https://github.com/nkvrosales/larako', 'https://larako.netlify.app/')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p6.png" alt="Larako">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Larako</h3>
+                        <p class="proj__desc">A personal web application project deployed on Netlify, showcasing frontend design and interactivity.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">CSS</span>
+                            <span class="proj__tag">JavaScript</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/larako" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                            <a href="https://larako.netlify.app/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="web" onclick="openModal('images/p8.png', 'Notes', 'https://github.com/nkvrosales/Notes', 'https://noteslang.netlify.app/')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p8.png" alt="Notes App">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Notes</h3>
+                        <p class="proj__desc">A clean, minimal note-taking web app with persistent storage and a smooth user experience.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">CSS</span>
+                            <span class="proj__tag">JavaScript</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Notes" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                            <a href="https://noteslang.netlify.app/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="mobile" onclick="openModal('images/p3.png', 'Calisthenics App', 'https://github.com/nkvrosales/Calisthenics-Mobile-Application')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p3.png" alt="Calisthenics Mobile Application">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Calisthenics App</h3>
+                        <p class="proj__desc">A mobile fitness application guiding users through bodyweight exercise routines with structured workout plans.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">Mobile</span>
+                            <span class="proj__tag">UI/UX</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Calisthenics-Mobile-Application" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="iot" onclick="openModal('images/p4.PNG', 'Smoke Detection System', 'https://github.com/nkvrosales/Smoke-Detection-System')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p4.PNG" alt="Smoke Detection System">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Smoke Detection System</h3>
+                        <p class="proj__desc">An IoT-based smoke detection system with real-time alerts, hardware integration, and sensor monitoring.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">IoT</span>
+                            <span class="proj__tag">Arduino</span>
+                            <span class="proj__tag">Sensors</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Smoke-Detection-System" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="game" onclick="openModal('images/p7.png', 'Snake Game', 'https://github.com/nkvrosales/snakegame', 'https://snakegameforlara.netlify.app/')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p7.png" alt="Snake Game">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Snake Game</h3>
+                        <p class="proj__desc">A classic snake game built in vanilla JavaScript with smooth controls, score tracking, and a sleek interface.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">CSS</span>
+                            <span class="proj__tag">JavaScript</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/snakegame" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                            <a href="https://snakegameforlara.netlify.app/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="game" onclick="openModal('images/p1.png', 'Number Matching Game', 'https://github.com/nkvrosales/Number-Matching-Game')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p1.png" alt="Number Matching Game">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Number Matching Game</h3>
+                        <p class="proj__desc">A memory and logic browser game where players match number pairs under time pressure.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">CSS</span>
+                            <span class="proj__tag">JavaScript</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Number-Matching-Game" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj__card" data-category="game" onclick="openModal('images/p2.png', 'Tic-Tac-Toe', 'https://github.com/nkvrosales/Tic-Tac-Toe')">
+                    <div class="proj__img-wrap">
+                        <img src="images/p2.png" alt="Tic-Tac-Toe">
+                        <div class="proj__overlay">
+                            <span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View Details</span>
+                        </div>
+                    </div>
+                    <div class="proj__body">
+                        <h3 class="proj__title">Tic-Tac-Toe</h3>
+                        <p class="proj__desc">A two-player browser Tic-Tac-Toe game with win detection, turn switching, and a clean reset flow.</p>
+                        <div class="proj__tags">
+                            <span class="proj__tag">HTML</span>
+                            <span class="proj__tag">CSS</span>
+                            <span class="proj__tag">JavaScript</span>
+                        </div>
+                        <div class="proj__links" onclick="event.stopPropagation()">
+                            <a href="https://github.com/nkvrosales/Tic-Tac-Toe" target="_blank" class="proj__link proj__link--github"><i class='bx bxl-github'></i> Code</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
