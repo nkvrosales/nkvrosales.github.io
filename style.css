@@ -313,6 +313,7 @@ img {
     color: #fff;
     padding: .75rem 2.5rem;
     font-weight: var(--font-semi);
+    border: 2px solid var(--first-color);
     border-radius: .5rem;
     transition: all .3s;
 }
