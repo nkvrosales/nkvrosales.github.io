@@ -40,6 +40,7 @@
     --footer-social-color: var(--second-color);
     --footer-social-bg-hover: rgba(0, 0, 0, 0.03);
     --footer-divider-color: rgba(0, 0, 0, 0.08);
+    --button-hover-color: #fff;
 }
 
 /*===== DARK MODE =====*/
@@ -58,6 +59,7 @@
     --footer-social-color: #fff;
     --footer-social-bg-hover: rgba(255, 255, 255, 0.03);
     --footer-divider-color: rgba(255, 255, 255, 0.08);
+    --button-hover-color: #0d1117;
 }
 
 @media screen and (min-width: 968px) {
@@ -318,6 +320,7 @@ img {
 .button:hover {
     box-shadow: rgba(17, 17, 26, 0.3) 0px 8px 24px, rgba(17, 17, 26, 0.3) 0px 16px 56px, rgba(17, 17, 26, 0.3) 0px 24px 80px;
     background-color: var(--second-color);
+    color: var(--button-hover-color);
 }
 
 /* ===== ABOUT =====*/
@@ -691,12 +694,11 @@ img {
 .contact__submit-btn:hover {
     background-color: #ffffff;
     color: var(--first-color);
-    transform: translateY(-2px);
     box-shadow: 0 8px 24px hsla(var(--hue-color), 89%, 60%, 0.35);
 }
 
 .contact__submit-btn:hover .contact__submit-icon {
-    transform: translateX(3px) translateY(-3px);
+    transform: none;
 }
 
 [data-theme="dark"] .contact__submit-btn {
