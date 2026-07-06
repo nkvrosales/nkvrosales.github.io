@@ -319,9 +319,7 @@ img {
 }
 
 .button:hover {
-    box-shadow: rgba(17, 17, 26, 0.3) 0px 8px 24px, rgba(17, 17, 26, 0.3) 0px 16px 56px, rgba(17, 17, 26, 0.3) 0px 24px 80px;
-    background-color: var(--second-color);
-    color: var(--button-hover-color);
+    filter: brightness(0.85);
 }
 
 /* ===== ABOUT =====*/
@@ -1155,7 +1153,7 @@ img {
 
 .button--ghost:hover {
     background-color: var(--first-color);
-    color: var(--footer-title-color);
+    color: #ffffff;
 }
 
 /* Ensure buttons aren't too wide on small screens */
@@ -1578,7 +1576,7 @@ img {
 .proj__filter-btn.active {
     background-color: var(--first-color);
     border-color: var(--first-color);
-    color: var(--footer-social-color);
+    color: #fff;
 }
 
 .proj__grid {
@@ -1712,22 +1710,28 @@ img {
 .proj__link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.35rem;
     font-size: 0.78rem;
     font-weight: var(--font-semi);
+    line-height: 1;
+    min-height: 32px;
+    min-width: 80px;
     padding: 0.35rem 0.9rem;
-    border-radius: 0.4rem;
+    border-radius: 2rem;
     transition: all 0.2s ease;
 }
 
 .proj__link--github {
-    background: var(--body-bg);
-    border: 1.5px solid rgba(0,0,0,0.12);
+    background: #ced4da;
+    border: none;
     color: var(--text-color);
+    padding: 0.35rem 0.9rem;
 }
 
 [data-theme="dark"] .proj__link--github {
-    border-color: rgba(255,255,255,0.15);
+    background: #000;
+    border: none;
 }
 
 .proj__link--github:hover {
@@ -1744,8 +1748,9 @@ img {
 
 .proj__link--live {
     background-color: var(--first-color);
-    border: 1.5px solid var(--first-color);
+    border: none;
     color: #fff;
+    padding: 0.35rem 0.9rem;
 }
 
 .proj__link--live:hover {
