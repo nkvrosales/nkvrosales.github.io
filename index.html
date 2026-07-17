@@ -17,6 +17,7 @@
     <a href="#home" class="sidebar__link active" data-section="home">Home</a>
     <a href="#about" class="sidebar__link" data-section="about">About</a>
     <a href="#skills" class="sidebar__link" data-section="skills">Stack</a>
+    <a href="#certificates" class="sidebar__link" data-section="certificates">Certificates</a>
     <a href="#projects" class="sidebar__link" data-section="projects">Projects</a>
     <a href="#contact" class="sidebar__link" data-section="contact">Contact</a>
   </nav>
@@ -47,6 +48,7 @@
   <a href="#home" class="mobile-menu__link" data-section="home">home</a>
   <a href="#about" class="mobile-menu__link" data-section="about">about</a>
   <a href="#skills" class="mobile-menu__link" data-section="skills">stack</a>
+  <a href="#certificates" class="mobile-menu__link" data-section="certificates">certificates</a>
   <a href="#projects" class="mobile-menu__link" data-section="projects">projects</a>
   <a href="#contact" class="mobile-menu__link" data-section="contact">contact</a>
   <div class="mobile-menu__socials">
@@ -80,8 +82,8 @@
       web developer.
     </p>
     <div class="hero__actions reveal">
-      <a href="mailto:nkvrosales@gmail.com" class="btn btn--primary"><i class='bx bx-envelope'></i> contact me</a>
-      <a href="cv.pdf" class="btn btn--ghost" download><i class='bx bx-download'></i> download cv</a>
+      <a href="mailto:nkvrosales@gmail.com" class="btn btn--primary"> Contact me</a>
+      <a href="cv.pdf" class="btn btn--ghost" target="_blank"> Curriculum Vitae</a>
     </div>
     <div class="hero__socials reveal">
       <a href="https://github.com/nkvrosales" class="icon-box" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
@@ -94,10 +96,9 @@
     <div class="section-head reveal"><span class="num">01</span><h2>about</h2></div>
 
     <p class="about__text reveal">
-      Hello! I'm <strong>Nicklaus Karl Vergel C. Rosales</strong>, currently studying Information Technology
-      at Mapúa Malayan Colleges Laguna. Outside of coursework I'm usually deep in a build: a hospital
-      inventory system, a finance tracker, or something for fun. When I'm not at the keyboard, I'm gaming,
-      exploring new music, or getting lost in a good show.
+      I'm <strong>Nicklaus Karl Vergel C. Rosales,</strong> an IT student at Mapúa Malayan Colleges Laguna passionate about building practical web applications. I focus on creating websites or web applications that I can use or that solve real problems things that genuinely ease everyday life or help people in some way. My goal is to eventually build something that resonates with a lot of users.
+      <br></br>
+      When I'm not coding, you'll find me gaming, listening to music, or binge-watching shows that capture my attention. These interests often inspire my design choices I believe good user experience comes from understanding how people actually want to interact with things.
     </p>
 
     <div class="grid-2">
@@ -187,7 +188,7 @@
             <span class="skill-chip">PHP</span><span class="skill-chip">CodeIgniter 4</span>
             <span class="skill-chip">Python</span><span class="skill-chip">ASP.NET</span><span class="skill-chip">MySQL</span>
             <span class="skill-chip">Supabase</span><span class="skill-chip">PostgreSQL</span>
-            <span class="skill-chip">XAMPP</span>
+            <span class="skill-chip">Firebase</span><span class="skill-chip">Express.js</span><span class="skill-chip">Node.js</span><span class="skill-chip">XAMPP</span>
           </div>
         </div>
         <div class="skill-group">
@@ -199,8 +200,7 @@
         <div class="skill-group">
           <span class="arsenal-group-label">Tools &amp; Networking</span>
           <div class="skill-row">
-            <span class="skill-chip">Git &amp; GitHub</span><span class="skill-chip">Cisco Networking</span>
-            <span class="skill-chip">CompTIA ITF+</span>
+            <span class="skill-chip">Git &amp; GitHub</span><span class="skill-chip">Netlify</span><span class="skill-chip">Vercel</span><span class="skill-chip">Cisco Networking</span>
           </div>
         </div>
         <div class="skill-group">
@@ -213,9 +213,46 @@
     </div>
   </section>
 
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="section-head reveal"><span class="num">03</span><h2>certificates</h2></div>
+
+    <div class="certificate-carousel reveal" aria-label="Certificates">
+      <article class="certificate-card">
+        <div class="certificate-card__image-wrap">
+          <img src="images/comptia.png" alt="CompTIA ITF+ certification" loading="lazy">
+        </div>
+        <div class="certificate-card__content">
+          <span class="certificate-card__issuer">CompTIA</span>
+          <h3>CompTIA ITF+ (IT Fundamentals)</h3>
+          <p>Foundational certification covering essential IT concepts, terminology, infrastructure, applications, software development, databases, and security.</p>
+          <span class="pill">IT Fundamentals</span>
+        </div>
+      </article>
+
+      <article class="certificate-card" hidden>
+        <div class="certificate-card__image-wrap">
+          <img src="images/cisco.png" alt="Cisco Networking Academy Introduction to Packet Tracer certificate" loading="lazy">
+        </div>
+        <div class="certificate-card__content">
+          <span class="certificate-card__issuer">Cisco Networking Academy</span>
+          <h3>Introduction to Packet Tracer</h3>
+          <p>Completed hands-on training in using Cisco Packet Tracer to create, configure, and test network simulations.</p>
+          <span class="pill">Networking</span>
+        </div>
+      </article>
+
+      <div class="certificate-carousel__controls">
+        <button class="certificate-carousel__button" id="certificate-prev" type="button" aria-label="Show previous certificate"><i class='bx bx-left-arrow-alt'></i></button>
+        <span class="certificate-carousel__counter" id="certificate-counter" aria-live="polite">1 / 2</span>
+        <button class="certificate-carousel__button" id="certificate-next" type="button" aria-label="Show next certificate"><i class='bx bx-right-arrow-alt'></i></button>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-head reveal"><span class="num">03</span><h2>projects</h2></div>
+    <div class="section-head reveal"><span class="num">04</span><h2>projects</h2></div>
 
     <div class="proj__filters reveal">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -226,6 +263,19 @@
     </div>
 
     <div class="proj__grid" id="proj-grid">
+
+      <div class="proj__card reveal" data-category="web" data-img="images/p16.png" data-title="Lokal" data-github="https://github.com/nkvrosales" data-web="http://lokal-dev.com/">
+        <div class="proj__img-wrap"><img src="images/p16.png" alt="Lokal" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
+        <div class="proj__body">
+          <h3 class="proj__title">Lokal</h3>
+          <p class="proj__desc">A Web and Mobile Application with IoT-Enabled Connected Systems for Tracking Small Businesses in Local Communities.</p>
+          <div class="proj__tags"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
+          <div class="proj__links" onclick="event.stopPropagation()">
+            <a href="https://github.com/nkvrosales" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
+            <a href="http://lokal-dev.com/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
+          </div>
+        </div>
+      </div>
 
       <div class="proj__card reveal" data-category="web" data-img="images/p12.png" data-title="Portfolio v1" data-github="https://github.com/nkvrosales/portfolio-v1" data-web="https://nkvrosales.netlify.app/">
         <div class="proj__img-wrap"><img src="images/p12.png" alt="Portfolio v1" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
@@ -243,7 +293,7 @@
       <div class="proj__card reveal" data-category="web" data-img="images/p10.png" data-title="Binan City Hospital Inventory" data-github="https://github.com/nkvrosales/">
         <div class="proj__img-wrap"><img src="images/p10.png" alt="Binan City Hospital Inventory" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
         <div class="proj__body">
-          <h3 class="proj__title">Binan City Hospital Inventory</h3>
+          <h3 class="proj__title">Binan City Hospital Inventory System</h3>
           <p class="proj__desc">Hospital inventory management system built with CodeIgniter 4 and MySQL for tracking supplies, equipment, and stock levels.</p>
           <div class="proj__tags"><span class="pill">PHP</span><span class="pill">CodeIgniter 4</span><span class="pill">MySQL</span><span class="pill">jQuery</span><span class="pill">Bootstrap</span></div>
           <div class="proj__links" onclick="event.stopPropagation()">
@@ -275,6 +325,19 @@
           <div class="proj__links" onclick="event.stopPropagation()">
             <a href="https://github.com/nkvrosales/Spendwise" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
             <a href="http://spendwiseph.vercel.app/" target="_blank" class="proj__link"><i class='bx bx-link-external'></i> Live</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card reveal" data-category="web" data-img="images/p15.png" data-title="Susa" data-github="https://github.com/nkvrosales/Susa" data-web="https://susaworldwide.netlify.app/">
+        <div class="proj__img-wrap"><img src="images/p15.png" alt="Susa" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
+        <div class="proj__body">
+          <h3 class="proj__title">Susa</h3>
+          <p class="proj__desc">Single-page community site with animated starfield background, responsive design, and an integrated audio player.</p>
+          <div class="proj__tags"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
+          <div class="proj__links" onclick="event.stopPropagation()">
+            <a href="https://github.com/nkvrosales/Susa" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
+            <a href="https://susaworldwide.netlify.app/" target="_blank" class="proj__link proj__link--live"><i class='bx bx-link-external'></i> Live</a>
           </div>
         </div>
       </div>
@@ -333,8 +396,8 @@
         </div>
       </div>
 
-      <div class="proj__card reveal" data-category="iot" data-img="images/p4.PNG" data-title="Smoke Detection System" data-github="https://github.com/nkvrosales/Smoke-Detection-System">
-        <div class="proj__img-wrap"><img src="images/p4.PNG" alt="Smoke detection system" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
+      <div class="proj__card reveal" data-category="iot" data-img="images/p17.PNG" data-title="Smoke Detection System" data-github="https://github.com/nkvrosales/Smoke-Detection-System">
+        <div class="proj__img-wrap"><img src="images/p17.PNG" alt="Smoke detection system" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
         <div class="proj__body">
           <h3 class="proj__title">Smoke Detection System</h3>
           <p class="proj__desc">An IoT-based smoke detection system with real-time alerts, hardware integration, and sensor monitoring.</p>
@@ -362,8 +425,8 @@
         <div class="proj__img-wrap"><img src="images/p1.png" alt="Number matching game" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
         <div class="proj__body">
           <h3 class="proj__title">Number Matching Game</h3>
-          <p class="proj__desc">A memory and logic browser game where players match number pairs under time pressure.</p>
-          <div class="proj__tags"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
+          <p class="proj__desc">A memory-based tile matching game with 16 tiles where players flip and match number pairs. Features reset and exit options.</p>
+          <div class="proj__tags"><span class="pill">Python</span></div>
           <div class="proj__links" onclick="event.stopPropagation()">
             <a href="https://github.com/nkvrosales/Number-Matching-Game" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
           </div>
@@ -374,10 +437,22 @@
         <div class="proj__img-wrap"><img src="images/p2.png" alt="Tic-Tac-Toe" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
         <div class="proj__body">
           <h3 class="proj__title">Tic-Tac-Toe</h3>
-          <p class="proj__desc">A two-player browser Tic-Tac-Toe game with win detection, turn switching, and a clean reset flow.</p>
-          <div class="proj__tags"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span></div>
+          <p class="proj__desc">A C# .NET console application featuring multiple game modes, single-player AI opponent, and game management features.</p>
+          <div class="proj__tags"><span class="pill">C#</span><span class="pill">.NET Framework</span></div>
           <div class="proj__links" onclick="event.stopPropagation()">
             <a href="https://github.com/nkvrosales/Tic-Tac-Toe" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card reveal" data-category="web" data-img="images/p14.png" data-title="TwitterClone" data-github="https://github.com/nkvrosales/TwitterClone">
+        <div class="proj__img-wrap"><img src="images/p14.png" alt="TwitterClone" loading="lazy"><div class="proj__overlay"><span class="proj__overlay-text"><i class='bx bx-expand-alt'></i> View details</span></div></div>
+        <div class="proj__body">
+          <h3 class="proj__title">TwitterClone</h3>
+          <p class="proj__desc">A full-stack social media application with JWT authentication, REST API with Swagger documentation, and file-based data storage.</p>
+          <div class="proj__tags"><span class="pill">JavaScript</span><span class="pill">Express.js</span><span class="pill">Netlify</span><span class="pill">JWT</span></div>
+          <div class="proj__links" onclick="event.stopPropagation()">
+            <a href="https://github.com/nkvrosales/TwitterClone" target="_blank" class="proj__link"><i class='bx bxl-github'></i> Code</a>
           </div>
         </div>
       </div>
@@ -387,7 +462,7 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-head reveal"><span class="num">04</span><h2>contact</h2></div>
+    <div class="section-head reveal"><span class="num">05</span><h2>contact</h2></div>
     <p class="contact__desc reveal">Have a project in mind or just want to say hello? Feel free to reach out — I'm always open to discussing new opportunities.</p>
 
     <div class="contact__grid">
@@ -438,7 +513,7 @@
         <div class="footer__col-title">Quick Links</div>
         <div class="footer__links">
           <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Stack</a>
-          <a href="#projects">Projects</a><a href="#contact">Contact</a>
+          <a href="#certificates">Certificates</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
         </div>
       </div>
       <div>

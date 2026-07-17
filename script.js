@@ -119,6 +119,28 @@ if ('IntersectionObserver' in window) {
 }
 
 /* =========================================================
+   CERTIFICATE CAROUSEL
+   ========================================================= */
+const certificateCarousel = document.querySelector('.certificate-carousel');
+const certificateCards = certificateCarousel?.querySelectorAll('.certificate-card');
+const certificateCounter = document.getElementById('certificate-counter');
+const certificatePrev = document.getElementById('certificate-prev');
+const certificateNext = document.getElementById('certificate-next');
+let certificateIndex = 0;
+
+function showCertificate(index) {
+  if (!certificateCards?.length) return;
+  certificateIndex = (index + certificateCards.length) % certificateCards.length;
+  certificateCards.forEach((card, cardIndex) => {
+    card.hidden = cardIndex !== certificateIndex;
+  });
+  certificateCounter.textContent = `${certificateIndex + 1} / ${certificateCards.length}`;
+}
+
+certificatePrev?.addEventListener('click', () => showCertificate(certificateIndex - 1));
+certificateNext?.addEventListener('click', () => showCertificate(certificateIndex + 1));
+
+/* =========================================================
    PROJECT MODAL
    ========================================================= */
 const modal = document.getElementById('project-modal');
